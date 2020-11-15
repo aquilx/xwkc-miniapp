@@ -5,16 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    servicelist:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.loadServices();
   },
 
+  loadServices: function() {
+    // 调用云函数
+    wx.cloud.callFunction({
+      name: 'servicelist',
+      data: {},
+      success: res => {
+        console.log(res.result)
+        this.setData({
+          servicelist: res.result.list
+        });
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
