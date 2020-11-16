@@ -5,7 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    servicelist:[]
+    servicelist:[],
+    latitude: 39.955967,
+    longitude: 116.550452,
+    markers: [{
+      id: 1,
+      latitude: 39.955967,
+      longitude: 116.550452,
+      title: '京爱门诊',
+      iconPath: '../../images/location.png'
+    },{
+      id: 2,
+      latitude: 39.956793,
+      longitude: 116.547255,
+      title: '东坝中街'
+    },{ 
+      id: 3,
+      latitude: 39.954388,
+      longitude: 116.547250,
+      title: '金泰丽富嘉园'
+    }]
   },
 
   /**
@@ -34,8 +53,8 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
+  onReady: function (e) {
+    this.mapCtx = wx.createMapContext('myMap')
   },
 
   /**

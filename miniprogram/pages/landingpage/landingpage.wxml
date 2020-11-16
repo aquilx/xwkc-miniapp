@@ -7,9 +7,10 @@
     <button class="display-button">地理位置</button>
   </view>
   <view class="service-table">
-    <swiper vertical="{{false}}" currnet="{{currentIndex}}" style="height:100%; width:90%">
+    <swiper indicator-dots indicator-active-color="rgb(52, 86,132)" circular vertical="{{false}}" currnet="{{currentIndex}}" style="height:100%; width:80%">
       <block wx:for="{{servicelist}}" wx:key='item' wx:for-index="index">
         <swiper-item>
+          <view class="table-topline"></view>
             <text class="table-caption">{{item.title}}</text>
             <view class="table-header">
               <text class="table-header-text">项目名称</text>
@@ -29,5 +30,24 @@
       </block>
     </swiper>
   </view>
-  <view class="map-view"></view>
+  <view class="map-view">
+    <map
+      id="myMap"
+      style="width: 80%; height: 300px;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      covers="{{covers}}"
+      show-location
+      show-compass
+      show-scale
+      scale="15"
+    ></map>
+   <view class="map-address">
+    <text>地址:北京市朝阳区东坝中路30号院3号楼1层103。</text>
+    <text>公交-东坝中街站:的线路有350路，619路，640路，659路，847路，983路公交线路，下车步行297米。</text>
+    <text>公交-金泰丽富嘉园站:571路，350路，553路，640路，特16路公交线路，下车步行340米。</text>
+    <text>地铁: 3号线-东坝中街站(在建)。</text>
+   </view>
+  </view>
 </scroll-view>

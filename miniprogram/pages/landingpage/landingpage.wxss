@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top: 2px, solid, rgb(52, 86,132);
 }
 
 .display-icon {
@@ -28,7 +29,7 @@
   width: 180rpx;
   height: 50rpx;
   border-radius: 50rpx;
-  background-color: cornflowerblue;
+  background-color:  rgb(52, 86,132);
   color:white;
 }
 
@@ -39,7 +40,11 @@
   display: flex;
   justify-content: center;
 }
-
+.table-topline {
+  background-color: rgb(52, 86,132);
+  width: 100%;
+  height: 2px;
+}
 .table-content {
   width: 100%;
   height: 100%;
@@ -49,7 +54,6 @@
 .table-caption {
   display: flex;
   font-size: 24px;
-  font-weight: 60000;
   padding-top: 30rpx;
   padding-bottom: 30rpx;
 }
@@ -76,6 +80,16 @@
 .map-view {
   position: relative;
   width: 100%;
-  height: 300rpx;
+  height: 1500rpx;
   background-color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.map-address {
+  width: 80%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
 }
