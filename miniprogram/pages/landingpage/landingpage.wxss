@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   border-top: 2px, solid, rgb(52, 86,132);
+  background-color:#FFFFFF;
 }
 
 .display-icon {
@@ -27,16 +28,17 @@
 .display-button {
   margin-top: 20rpx;
   width: 180rpx;
-  height: 50rpx;
-  border-radius: 50rpx;
+  height: 40px;
+  border-radius: 80rpx;
   background-color:  rgb(52, 86,132);
   color:white;
+  justify-content: center;
 }
 
 .service-table {
   position: relative;
   width: 100%;
-  height: 850rpx;
+  height: 1200rpx;
   display: flex;
   justify-content: center;
 }
@@ -81,15 +83,24 @@
   position: relative;
   width: 100%;
   height: 1500rpx;
-  background-color: gold;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 20px;
 }
 .map-address {
   width: 80%;
   height: 100rpx;
   display: flex;
   flex-direction: column;
+}
+
+.map-address-spacing {
+  margin-top: 10rpx;
+}
+.map-address-title {
+  font-weight: 500;
+}
+.map-address-value {
+  font-weight: 350;
 }

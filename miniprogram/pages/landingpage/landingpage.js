@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    object_id :null,
     servicelist:[],
     latitude: 39.955967,
     longitude: 116.550452,
@@ -18,12 +19,12 @@ Page({
       id: 2,
       latitude: 39.956793,
       longitude: 116.547255,
-      title: '东坝中街'
+      title: '金泰丽富嘉园'
     },{ 
       id: 3,
       latitude: 39.954388,
       longitude: 116.547250,
-      title: '金泰丽富嘉园'
+      title: '东坝中街'
     }]
   },
 
@@ -48,6 +49,11 @@ Page({
       fail: err => {
         console.error('[云函数] [login] 调用失败', err)
       }
+    })
+  },
+  scorllToMap: function(e) {
+    wx.pageScrollTo({
+      scrollTop: 2200
     })
   },
   /**

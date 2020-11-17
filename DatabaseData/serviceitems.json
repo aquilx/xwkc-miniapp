@@ -1,6 +1,6 @@
 {"title": "拆线30元起", "price":30, "price2":0, "unit":"元起","desc":"","hidden":"false","category":"2fd465895fb0a67d00bf06ac01059cca"}
 {"title": "牙结扎固定书", "price":250, "price2":0, "unit":"元/颗","desc":"","hidden":"false","category":"2fd465895fb0a67d00bf06ac01059cca"}
-{"title": "厢下颌关节复位", "price":100, "price2":0, "unit":"元/颗","desc":"","hidden":"false","category":"2fd465895fb0a67d00bf06ac01059cca"}
+{"title": "颞下颌关节复位", "price":100, "price2":0, "unit":"元/颗","desc":"","hidden":"false","category":"2fd465895fb0a67d00bf06ac01059cca"}
 {"title": "口外脓肿切开引流术", "price":100, "price2":0, "unit":"元/颗","desc":"","hidden":"false","category":"2fd465895fb0a67d00bf06ac01059cca"}
 {"title": "牙冠延长术", "price":225, "price2":0, "unit":"元/颗","desc":"","hidden":"false","category":"2fd465895fb0a67d00bf06ac01059cca"}
 {"title": "根尖切除术", "price":300, "price2":0, "unit":"元/颗","desc":"","hidden":"false","category":"2fd465895fb0a67d00bf06ac01059cca"}
@@ -14,14 +14,21 @@
 {"title": "超声波洁牙-抛光", "price":150, "unit":"元/全口","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
 {"title": "超声波洁牙+抛光+牙周上药", "price":188, "unit":"元/全口","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
 {"title": "无痛超声波洁治", "price":360, "unit":"元/全口","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
-{"title": "进口唼砂+抛光", "price":300, "unit":"元/全口","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
-{"title": "冠(牙)两冲洗", "price":50, "unit":"元/颗","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
-{"title": "进口派力荧", "price":350, "unit":"元/支","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
+{"title": "进口喷砂+抛光", "price":300, "unit":"元/全口","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
+{"title": "冠(牙)周冲洗", "price":50, "unit":"元/颗","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
+{"title": "进口派力奥", "price":350, "unit":"元/支","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
 {"title": "龈下刮治", "price":4000, "unit":"元/口","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
 {"title": "口内切开排脓上药", "price":100, "unit":"元/颗","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
 {"title": "根尖切除术", "price":300, "unit":"元/颗","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
 {"title": "牙半切除术", "price":560, "unit":"元/颗","desc":"","hidden":"false","category":"dd8d23355fb0a6e500a22a8b63fb7552"}
-
-
-
-  
+{"title": "恒牙全程标准根管治疗", "price":1000, "unit":"元/颗","desc":"","hidden":"false","category":"3dfe72d65fb0a75a00c8898f4de92ad7"}
+{"title": "恒牙机括根笛治疗", "price":1500, "unit":"元/颗","desc":"","hidden":"false","category":"3dfe72d65fb0a75a00c8898f4de92ad7"}
+{"title": "一次性根管治疗前牙", "price":450, "unit":"元/颗","desc":"牙冠另计费用","hidden":"false","category":"3dfe72d65fb0a75a00c8898f4de92ad7"} 
+{"title": "一次性根管治疗后牙", "price":1200, "unit":"元/颗","desc":"","hidden":"false","category":"3dfe72d65fb0a75a00c8898f4de92ad7"} 
+{"title": "牙髓止痛", "price":100, "unit":"元/颗","desc":"","hidden":"false","category":"3dfe72d65fb0a75a00c8898f4de92ad7"}
+{"title": "盖髓术", "price":400, "unit":"元/颗","desc":"","hidden":"false","category":"3dfe72d65fb0a75a00c8898f4de92ad7"} 
+{"title": "根管再治疗续加", "price":300, "unit":"元/颗","desc":"","hidden":"false","category":"3dfe72d65fb0a75a00c8898f4de92ad7"}
+{"title": "富士填充", "price":150, "unit":"元/颗","desc":"","hidden":"false","category":"38597c165fb0a77e00e3216651aa5e1f"}
+{"title": "美国3M250树脂", "price":240, "unit":"元/颗","desc":"","hidden":"false","category":"38597c165fb0a77e00e3216651aa5e1f"}
+{"title": "美国3M350加强型超硬纳米树脂", "price":360, "unit":"元/颗","desc":"","hidden":"false","category":"38597c165fb0a77e00e3216651aa5e1f"}
+{"title": "3MP60美学修复纳米树脂", "price":450, "unit":"元/颗","desc":"","hidden":"false","category":"38597c165fb0a77e00e3216651aa5e1f"}
