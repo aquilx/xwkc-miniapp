@@ -26,7 +26,7 @@
                 <text class=table-cell-text">{{serviceItem.price + serviceItem.unit}}</text>
               </view>
             </block>
-            <image src="{{item.imageid}}" mode="widthFix"  ></image>
+            <image src="{{item.imageid}}" mode="widthFix" style="width:100%" ></image>
         </swiper-item>
       </block>
     </swiper>
