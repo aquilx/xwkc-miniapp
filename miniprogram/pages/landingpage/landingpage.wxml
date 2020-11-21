@@ -1,5 +1,5 @@
 <!--miniprogram/pages/landingpage/landingpage.wxml-->
-<scroll-view scroll-y="true" scroll-into-view="{{object_id}}" style="height:1200px">
+<scroll-view scroll-y="true" scroll-into-view="{{object_id}}" style="background-color: white">
   <view class="top-display-area">
     <image class="display-icon" src="../../images/doctor-icon.png"></image>
     <text class="display-sologen">值得您信赖的私人医生</text>
@@ -7,26 +7,12 @@
     <button class="display-button" bindtap="scorllToMap">地理位置</button>
   </view>
   <view class="service-table">
-    <swiper indicator-dots indicator-active-color="rgb(52, 86,132)" circular vertical="{{false}}" currnet="{{currentIndex}}" style="height:100%; width:85%">
+    <swiper indicator-dots indicator-active-color="rgb(52, 86,132)" circular vertical="{{false}}" currnet="{{currentIndex}}" style="height:100%; width:100%">
       <block wx:for="{{servicelist}}" wx:key='item' wx:for-index="index">
         <swiper-item>
-          <view class="table-topline"></view>
-            <text class="table-caption">{{item.title}}</text>
-            <view class="table-header">
-              <text class="table-header-text">项目名称</text>
-              <text class="table-header-text">价格</text>
-            </view>
-            <block wx:for="{{item.items}}" wx:for-item="serviceItem" wx:key="_id" wx:for-index="sindex">
-              <view wx:if="{{sindex % 2 == 0}}" class="table-cell" style="background-color:white; height:{{item.cellHeight}}rpx">
-                <text class=table-cell-text">{{serviceItem.title}}</text>
-                <text class=table-cell-text">{{serviceItem.price + serviceItem.unit}}</text>
-              </view>
-              <view wx:else class="table-cell" style="background-color:rgb(203,217,230); height:{{item.cellHeight}}rpx">
-                <text class=table-cell-text">{{serviceItem.title}}</text>
-                <text class=table-cell-text">{{serviceItem.price + serviceItem.unit}}</text>
-              </view>
-            </block>
-            <image src="{{item.imageid}}" mode="widthFix" style="width:100%" ></image>
+          <view class="img-container">
+            <image src="{{item.bgimage}}" mode="widthFix"></image>
+          </view>
         </swiper-item>
       </block>
     </swiper>
@@ -44,7 +30,7 @@
       show-scale
       scale="15"
     ></map>
-   <view class="map-address">
+   <view class="map-address map-address-spacing">
     <view class="map-address-spacing map-address-title">地址:
       <text class="map-address-value"> 北京市朝阳区东坝中路30号院3号楼1层103。</text>
     </view>

@@ -64,7 +64,7 @@ Page({
   },
   scorllToMap: function(e) {
     wx.pageScrollTo({
-      scrollTop: 2200
+      scrollTop: 700
     })
   },
   /**
