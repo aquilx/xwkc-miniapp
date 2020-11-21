@@ -1,13 +1,24 @@
 <!--miniprogram/pages/landingpage/landingpage.wxml-->
 <scroll-view scroll-y="true" scroll-into-view="{{object_id}}" style="background-color: white">
+  <image class="arrow-btn" src="../../images/left-arrow.png" style="width:30px;height:30px;left:10px"
+    bindtap="leftAction"></image>
+  <image class="arrow-btn" src="../../images/right-arrow.png" style="width:30px;height:30px;right:10px"
+    bindtap="rightAction"></image>
+  <contact-button class="contact-style" style="top:10px;right:15px"></contact-button>
+  <text class="contact-style" style="top:30px">客服</text>
   <view class="top-display-area">
     <image class="display-icon" src="../../images/doctor-icon.png"></image>
+    <view class="wx-group">
+      <image src="../../images/wx-icon.png" style="width:28px;height:21px"></image>
+      <text bindtap="touchWx">miyaxinyu</text>
+    </view>
     <text class="display-sologen">值得您信赖的私人医生</text>
-    <button class="display-button">立即预约</button>
+    <button class="display-button" bindtap="bookingAction">立即预约</button>
     <button class="display-button" bindtap="scorllToMap">地理位置</button>
   </view>
   <view class="service-table">
-    <swiper indicator-dots indicator-active-color="rgb(52, 86,132)" circular vertical="{{false}}" currnet="{{currentIndex}}" style="height:100%; width:100%">
+    <swiper indicator-dots indicator-active-color="rgb(52, 86,132)" circular vertical="{{false}}"
+      current="{{currentIndex}}" style="height:100%; width:100%" bindchange="scrollAction">
       <block wx:for="{{servicelist}}" wx:key='item' wx:for-index="index">
         <swiper-item>
           <view class="img-container">
@@ -18,26 +29,18 @@
     </swiper>
   </view>
   <view class="map-view" id="map-area">
-    <map
-      id="myMap"
-      style="width: 80%; height: 300px;"
-      latitude="{{latitude}}"
-      longitude="{{longitude}}"
-      markers="{{markers}}"
-      covers="{{covers}}"
-      show-location
-      show-compass
-      show-scale
-      scale="15"
-    ></map>
-   <view class="map-address map-address-spacing">
-    <view class="map-address-spacing map-address-title">地址:
-      <text class="map-address-value"> 北京市朝阳区东坝中路30号院3号楼1层103。</text>
+    <map id="myMap" style="width: 80%; height: 300px;" latitude="{{latitude}}" longitude="{{longitude}}"
+      markers="{{markers}}" covers="{{covers}}" show-location show-compass show-scale scale="15"></map>
+    <view class="map-address map-address-spacing">
+      <view class="map-address-spacing map-address-title">地址:
+        <text class="map-address-value"> 北京市朝阳区东坝中路30号院3号楼1层103。</text>
+      </view>
+      <view class="map-address-spacing map-address-title">公交-东坝中街站:
+        <text class="map-address-value"> 线路有350路，619路，640路，659路，847路，983路公交线路，下车步行297米。</text></view>
+      <view class="map-address-spacing map-address-title">公交-金泰丽富嘉园站:<text class="map-address-value">
+          线路有571路，350路，553路，640路，特16路公交线路，下车步行340米。</text></view>
+      <view class="map-address-spacing map-address-title" id="address">地铁- 东坝中街站:<text class="map-address-value">
+          3号线-(在建)。</text></view>
     </view>
-    <view class="map-address-spacing map-address-title">公交-东坝中街站:
-    <text class="map-address-value"> 线路有350路，619路，640路，659路，847路，983路公交线路，下车步行297米。</text></view>
-    <view class="map-address-spacing map-address-title">公交-金泰丽富嘉园站:<text  class="map-address-value"> 线路有571路，350路，553路，640路，特16路公交线路，下车步行340米。</text></view>
-    <view class="map-address-spacing map-address-title" id="address">地铁:<text class="map-address-value"> 3号线-东坝中街站(在建)。</text></view>
-   </view>
   </view>
 </scroll-view>

@@ -9,6 +9,12 @@ Page({
     servicelist:[],
     latitude: 39.955967,
     longitude: 116.550452,
+    currentIndex:0,
+    indexMax:0,
+    contacts:[
+      "电话:18610556241",
+      "微信:XXX"
+    ],
     markers: [{
       id: 1,
       latitude: 39.955967,
@@ -43,7 +49,7 @@ Page({
       success: res => {
 
         var dataArray = res.result.list
-    
+        this.data.indexMax = dataArray.length
         for(var i = 0; i < dataArray.length; i++) {
           var item = dataArray[i];
           var rate =  item.width / 1200 
@@ -61,6 +67,46 @@ Page({
         console.error('[云函数] [login] 调用失败', err)
       }
     })
+  },
+  bookingAction: function(e) {
+    wx.makePhoneCall({
+      phoneNumber: '18610556241',
+    })
+  },
+  touchWx: function(e) {
+    wx.copy
+    wx.showToast({
+      title: '已复制微信号',
+    })
+  },
+  bindPickerChange: function(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  leftAction: function(e){
+    var current = this.data.currentIndex - 1
+    if (current < 0) {
+      current = this.data.indexMax - 1
+    }
+    this.setData({
+      currentIndex: current
+   });
+   console.log("left %d", current)
+  },
+  rightAction: function(e){
+    var current = this.data.currentIndex + 1
+    if (current >= this.data.indexMax) {
+      current = 0
+    }
+    this.setData({
+       currentIndex: current
+    });
+    console.log("right %d", current)
+  },
+  scrollAction: function(e) {
+    this.data.currentIndex = e.detail.current;
   },
   scorllToMap: function(e) {
     wx.pageScrollTo({
