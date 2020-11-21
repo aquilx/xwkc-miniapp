@@ -17,11 +17,11 @@
               <text class="table-header-text">价格</text>
             </view>
             <block wx:for="{{item.items}}" wx:for-item="serviceItem" wx:key="_id" wx:for-index="sindex">
-              <view wx:if="{{sindex % 2 == 0}}" class="table-cell" style="background-color:white">
+              <view wx:if="{{sindex % 2 == 0}}" class="table-cell" style="background-color:white; height:{{item.cellHeight}}rpx">
                 <text class=table-cell-text">{{serviceItem.title}}</text>
                 <text class=table-cell-text">{{serviceItem.price + serviceItem.unit}}</text>
               </view>
-              <view wx:else class="table-cell" style="background-color:rgb(203,217,230)">
+              <view wx:else class="table-cell" style="background-color:rgb(203,217,230); height:{{item.cellHeight}}rpx">
                 <text class=table-cell-text">{{serviceItem.title}}</text>
                 <text class=table-cell-text">{{serviceItem.price + serviceItem.unit}}</text>
               </view>

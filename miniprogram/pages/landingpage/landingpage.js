@@ -41,9 +41,20 @@ Page({
       name: 'servicelist',
       data: {},
       success: res => {
-        console.log(res.result)
+
+        var dataArray = res.result.list
+    
+        for(var i = 0; i < dataArray.length; i++) {
+          var item = dataArray[i];
+          var rate =  item.width / 1200 
+          var imageH =  wx.getSystemInfoSync().windowWidth * rate  * 0.85 
+          console.log("imageH %d", imageH)
+          var itemHeight = (662 - 21 - 65 - imageH) / item.items.length
+          item.cellHeight = itemHeight * 2 * 0.85;
+          dataArray[i] = item;
+        }
         this.setData({
-          servicelist: res.result.list
+          servicelist: dataArray
         });
       },
       fail: err => {
